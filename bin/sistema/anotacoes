@@ -1,0 +1,85 @@
+Deverá ter os seguintes metodos de Biblioteca:
+
+
+Cadastrar:
+
+-pegar os dados do livro;
+
+
+Remoção dos titulos:
+
+-remover nomes de livros;
+
+
+Consulta dos titulos:
+
+-busca por livros;
+
+
+Atributos de biblioteca:
+
+-livros (Arraylist<livros>)
+
+
+
+
+--------------------------------------------------------
+
+
+Super classe Livro
+
+
+Atributos:
+
+Código único (utilizado para todas as operações)
+
+Título
+
+Autor
+
+Número de páginas
+
+Número da estante (local onde ele está guardado na
+
+biblioteca) 
+
+
+
+Subclasse E-books herda Livro
+
+
+Atributos de e-book:
+
+link de download
+
+
+
+
+Subclasse Audiobooks  herda Livro
+
+
+Atributos:
+
+Duração total de audio
+
+Narrador
+
+
+
+
+-------------------------------------------------
+
+
+Na classe Biblioteca é necessario declarar o ArrayList de Livro para que posso ser passado os métodos.
+No Main, teremos que declarar um while para que possamos dar a opção de adicionar, remover e pesquisar os livros.
+
+Estou usando o switch case no main para que possa ser selecionado os metodos no main.
+Para eu utilizar o switch case deve estar dentro de um while com parametro true.
+
+Para que possa dar a opção de a pessoa escolher o metodo que ela quer, deve criar uma variavel com "Integer.parseInt"
+O Integer é uma função para trabalhar com inteiros como objetos. Já o parseInt, transforma o resultado da operação em inteiro.
+
+-------------------------------------------------
+
+Quando apresenta a opção de livros, fazemos uma comparação com base no que o user falou. Para a comparação usamos o .equalsIgnoreCase(), dessa forma
+passamos para o código comparar sem levar em consideração letras maiusculas ou minusculas.
