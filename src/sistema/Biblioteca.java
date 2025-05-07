@@ -3,9 +3,9 @@ package sistema;
 import java.util.ArrayList;
 
 public class Biblioteca {
-	private ArrayList <LivroF> listadeLivro = new ArrayList<LivroF>();
+	private ArrayList <Livro> listadeLivro = new ArrayList<Livro>();
 	
-	public void Cadastrar(LivroF dados) {
+	public void cadastrar(Livro dados) {
 		if(dados != null) {
 			listadeLivro.add(dados);
 			System.out.println("Livro adicionado na lista com sucesso");

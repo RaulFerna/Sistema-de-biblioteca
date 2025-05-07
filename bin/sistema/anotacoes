@@ -83,3 +83,8 @@ O Integer é uma função para trabalhar com inteiros como objetos. Já o parseI
 
 Quando apresenta a opção de livros, fazemos uma comparação com base no que o user falou. Para a comparação usamos o .equalsIgnoreCase(), dessa forma
 passamos para o código comparar sem levar em consideração letras maiusculas ou minusculas.
+
+---------------------------------------------------
+
+
+Na linha 34 do main, eu apliquei a Super como uma variavel para que eu possa atribuir qualquer valor para livro, por isso que na variavel eu tenho um retorno de null.
