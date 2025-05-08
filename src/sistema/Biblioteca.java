@@ -21,5 +21,15 @@ public class Biblioteca {
 		
 	}
 	
+	private Livro verificaExistencia(String codigo) {
+		for(int i = 0; i < this.listadeLivro.size(); i++) {
+			Livro l = this.listadeLivro.get(i); 
+			if(l.getCodigo().equals(codigo)) {
+				return l; 
+			}
+		}
+		return null ;
+	}
+	
 	
 }
