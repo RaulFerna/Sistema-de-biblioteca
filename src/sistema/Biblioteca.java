@@ -14,7 +14,12 @@ public class Biblioteca {
 		}	
 	}
 	
-	
+	public void listarLivros(Livro codigo) {
+		if(codigo!= null) {
+			
+		}
+		
+	}
 	
 	
 }

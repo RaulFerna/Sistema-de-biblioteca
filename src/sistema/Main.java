@@ -1,12 +1,11 @@
 package sistema;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList <Livro> listadeLivro = new ArrayList<Livro>();
+		Biblioteca biblioteca = new Biblioteca();
 		Scanner scanner = new Scanner(System.in);
 		
 		while(true) {
@@ -63,14 +62,16 @@ public class Main {
 			}else {
 				
 			}
-			
-				if(livro != null){
-					Biblioteca.cadastrar(livro);
-			  }else {
-				  System.out.println("Tipo de livro inválido.");
-			  }
+					biblioteca.cadastrar(livro);
+					break;
 	    }
+			case 2: {
+				System.out.println("Informe o código do livro que deseja remover");
+				scanner.nextLine();
+				break;
+			}
 	  }
+			
     }
   }
 	
