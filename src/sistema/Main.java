@@ -65,11 +65,17 @@ public class Main {
 					biblioteca.cadastrar(livro);
 					break;
 	    }
-			case 2: {
+			case 3: {
 				System.out.println("Informe o código do livro que deseja remover");
-				scanner.nextLine();
+				String codigo = scanner.nextLine();
+				biblioteca.listarLivros(codigo);
 				break;
 			}
+			
+			default:
+				System.out.println();
+				System.out.println("Selecione as opções existentes");
+				System.out.println();
 	  }
 			
     }

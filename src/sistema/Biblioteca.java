@@ -14,14 +14,18 @@ public class Biblioteca {
 		}	
 	}
 	
-	public void listarLivros(Livro codigo) {
-		if(codigo!= null) {
-			
+	public void listarLivros(String codigo) { 
+		for(int i = 0; i < this.listadeLivro.size(); i++) {
+			Livro l = this.listadeLivro.get(i); 
+			if(l.getCodigo().equals(codigo)) {
+				System.out.println("Livro" + l.getTitulo()+", " + "autor: " + l.getAutor()+ ", " + "código: "+l.getCodigo());
+			}else {
+				System.out.println("Cadastre o livro primeiro");
+			}
 		}
-		
 	}
 	
-	private Livro verificaExistencia(String codigo) {
+	/*private Livro verificaExistencia(String codigo) {
 		for(int i = 0; i < this.listadeLivro.size(); i++) {
 			Livro l = this.listadeLivro.get(i); 
 			if(l.getCodigo().equals(codigo)) {
@@ -29,7 +33,7 @@ public class Biblioteca {
 			}
 		}
 		return null ;
-	}
+	}*/
 	
 	
 }
