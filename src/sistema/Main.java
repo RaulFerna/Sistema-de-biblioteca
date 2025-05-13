@@ -65,10 +65,16 @@ public class Main {
 					biblioteca.cadastrar(livro);
 					break;
 	    }
+			case 2: {
+				System.out.println("Qual o código ISBN do livro?");
+				String codigolivro = scanner.nextLine();
+				biblioteca.removerLivro(codigolivro);
+				break;
+			}
+			
+			
 			case 3: {
-				System.out.println("Informe o código do livro que deseja remover");
-				String codigo = scanner.nextLine();
-				biblioteca.listarLivros(codigo);
+				biblioteca.listarLivros();
 				break;
 			}
 			

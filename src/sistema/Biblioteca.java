@@ -14,26 +14,32 @@ public class Biblioteca {
 		}	
 	}
 	
-	public void listarLivros(String codigo) { 
-		for(int i = 0; i < this.listadeLivro.size(); i++) {
-			Livro l = this.listadeLivro.get(i); 
-			if(l.getCodigo().equals(codigo)) {
-				System.out.println("Livro" + l.getTitulo()+", " + "autor: " + l.getAutor()+ ", " + "código: "+l.getCodigo());
-			}else {
-				System.out.println("Cadastre o livro primeiro");
-			}
-		}
+	public void listarLivros() {
+	    if (listadeLivro.isEmpty()) {
+	        System.out.println("Nenhum livro cadastrado.");
+	    } else {
+	        System.out.println("Lista de livros cadastrados:");
+	        for (Livro l : listadeLivro) {
+	            System.out.println("Título: " + l.getTitulo() +
+	                               ", Autor: " + l.getAutor() +
+	                               ", Código: " + l.getCodigo());
+	        }
+	    }
 	}
 	
-	/*private Livro verificaExistencia(String codigo) {
-		for(int i = 0; i < this.listadeLivro.size(); i++) {
-			Livro l = this.listadeLivro.get(i); 
-			if(l.getCodigo().equals(codigo)) {
-				return l; 
-			}
-		}
-		return null ;
-	}*/
+	public void removerLivro(String codigo) {
+	    for (int i = 0; i < listadeLivro.size(); i++) {
+	        Livro l = listadeLivro.get(i);
+	        if (l.getCodigo().equals(codigo)) {
+	            listadeLivro.remove(i);
+	            System.out.println("Livro removido com sucesso: " + l.getTitulo());
+	            return;
+	        }
+	    }
+	    System.out.println("Livro com código " + codigo + " não encontrado.");
+	}
+	
+	}
 	
 	
-}
+
